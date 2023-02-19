@@ -13,7 +13,7 @@ const NewsSummaryCard = ({ news }) => {
                     <Image className='me-2' style={{ height: '60px' }} roundedCircle src={author?.img} />
                     <div >
                         <p className='mb-0'>{author?.name ? author.name : 'Name not found'}</p>
-                        <p className='mb-0'>{author?.published_date.slice(0, 10)}</p>
+                        <p className='mb-0'>{author?.published_date}</p>
                     </div>
                 </div>
                 <div>
@@ -27,7 +27,7 @@ const NewsSummaryCard = ({ news }) => {
                 <Card.Text>
                     {
                         details.length > 250 ?
-                            <>{details.slice(0, 250) + '...'} <Link to={`/new/${_id}`}>Read More</Link></>
+                            <>{details.slice(0, 250) + '...'} <Link to={`/news/${_id}`}>Read More</Link></>
                             :
                             details
                     }

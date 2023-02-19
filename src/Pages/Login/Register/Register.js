@@ -4,8 +4,10 @@ import Form from 'react-bootstrap/Form';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 
 const Register = () => {
+    useTitle('Register')
 
     const { createUser, updateUserProfile, verifyEmail } = useContext(AuthContext);
     const [error, setError] = useState('');

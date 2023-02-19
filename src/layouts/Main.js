@@ -10,7 +10,7 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <Container>
+            <Container style={{ minHeight: '700px' }}>
                 <Row>
                     <Col lg="2">
                         <LeftSideNav></LeftSideNav>
